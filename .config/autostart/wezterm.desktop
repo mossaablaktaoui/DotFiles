@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/mlaktaou/.apps/wezterm/AppRun
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=false
+Name[en]=WezTerm
+Name=WezTerm
+Comment[en]=
+Comment=

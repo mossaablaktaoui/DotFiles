@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Ydotool Daemon
+Exec=/home/mlaktaou/.local/bin/ydotoold
+Terminal=false
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
