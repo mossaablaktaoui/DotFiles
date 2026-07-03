@@ -1,0 +1,29 @@
+[/]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+screensaver=['<Alt><Super>l']
+terminal=['<Alt><Super>t']
+
+[custom-keybindings/custom0]
+binding='<Super>w'
+command='/home/mlaktaou/.apps/wezterm/AppRun'
+name='WezTerm'
+
+[custom-keybindings/custom1]
+binding='<Super>j'
+command='xdotool click 5'
+name='Scroll Down'
+
+[custom-keybindings/custom2]
+binding='<Super>k'
+command='xdotool click 4'
+name='Scroll Up'
+
+[custom-keybindings/custom3]
+binding='<Primary><Shift><Alt>l'
+command='ft_lock'
+name='Lock'
+
+[custom-keybindings/custom4]
+binding='<Primary><Shift><Alt>o'
+command='gnome-session-quit'
+name='Log out'
