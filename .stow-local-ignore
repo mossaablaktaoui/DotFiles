@@ -1,0 +1,7 @@
+^\.git$
+^\.git/
+^\.gitignore$
+^README\.md$
+^LICENSE$
+^\.stow-local-ignore$
+^\.config/another-window-session-manager/currentSession

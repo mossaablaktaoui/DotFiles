@@ -1,0 +1,118 @@
+{
+    "session_name": "wokring workflow",
+    "session_create_time": "6/25/2026, 2:34:06 PM",
+    "active_workspace_index": 2,
+    "x_session_config_objects": [
+        {
+            "window_id": "0x2a00004",
+            "desktop_number": 0,
+            "pid": 488110,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 0,
+                "y_offset": 32,
+                "width": 1920,
+                "height": 1048
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "‎‫how can I make my linux remember my opened windows and desktops then open then again after restarting - بحث Google‏ - Google Chrome‬‎",
+            "app_name": "Google Chrome",
+            "wm_class": "Google-chrome",
+            "wm_class_instance": "google-chrome",
+            "cmd": [
+                "/opt/google/chrome/chrome"
+            ],
+            "process_create_time": "Thu Jun 25 14:33:27 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 3
+            },
+            "windows_count": 1,
+            "cpu_percent": "22.0",
+            "memory_percent": "2.7",
+            "desktop_file_id": "google-chrome.desktop",
+            "desktop_file_id_full_path": "/usr/share/applications/google-chrome.desktop",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        },
+        {
+            "window_id": "0x2c00003",
+            "desktop_number": 1,
+            "pid": 488127,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 0,
+                "y_offset": 32,
+                "width": 1920,
+                "height": 1048
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "~",
+            "app_name": "org.wezfurlong.wezterm",
+            "wm_class": "org.wezfurlong.wezterm",
+            "wm_class_instance": "org.wezfurlong.wezterm",
+            "cmd": [
+                "/home/mlaktaou/.apps/wezterm/usr/bin/wezterm-gui"
+            ],
+            "process_create_time": "Thu Jun 25 14:33:27 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 3
+            },
+            "windows_count": 2,
+            "cpu_percent": "0.6",
+            "memory_percent": "0.8",
+            "desktop_file_id": "",
+            "desktop_file_id_full_path": "",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        },
+        {
+            "window_id": "0x2c00012",
+            "desktop_number": 2,
+            "pid": 488127,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 0,
+                "y_offset": 32,
+                "width": 1920,
+                "height": 1048
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "~",
+            "app_name": "org.wezfurlong.wezterm",
+            "wm_class": "org.wezfurlong.wezterm",
+            "wm_class_instance": "org.wezfurlong.wezterm",
+            "cmd": [
+                "/home/mlaktaou/.apps/wezterm/usr/bin/wezterm-gui"
+            ],
+            "process_create_time": "Thu Jun 25 14:33:27 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 3
+            },
+            "windows_count": 2,
+            "cpu_percent": "0.6",
+            "memory_percent": "0.8",
+            "desktop_file_id": "",
+            "desktop_file_id_full_path": "",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        }
+    ]
+}

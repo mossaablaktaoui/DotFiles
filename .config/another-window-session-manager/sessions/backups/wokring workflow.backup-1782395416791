@@ -1,0 +1,155 @@
+{
+    "session_name": "wokring workflow",
+    "session_create_time": "6/25/2026, 2:50:14 PM",
+    "active_workspace_index": 0,
+    "x_session_config_objects": [
+        {
+            "window_id": "0x2400004",
+            "desktop_number": 0,
+            "pid": 501163,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 0,
+                "y_offset": 32,
+                "width": 1920,
+                "height": 1048
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "‎‫how can I make my linux remember my opened windows and desktops then open then again after restarting - بحث Google‏ - Google Chrome‬‎",
+            "app_name": "Google Chrome",
+            "wm_class": "Google-chrome",
+            "wm_class_instance": "google-chrome",
+            "cmd": [
+                "/opt/google/chrome/chrome"
+            ],
+            "process_create_time": "Thu Jun 25 14:49:28 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 3
+            },
+            "windows_count": 1,
+            "cpu_percent": "22.7",
+            "memory_percent": "2.8",
+            "desktop_file_id": "google-chrome.desktop",
+            "desktop_file_id_full_path": "/usr/share/applications/google-chrome.desktop",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        },
+        {
+            "window_id": "0x3a00003",
+            "desktop_number": 1,
+            "pid": 501193,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 0,
+                "y_offset": 32,
+                "width": 1920,
+                "height": 1048
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "~",
+            "app_name": "org.wezfurlong.wezterm",
+            "wm_class": "org.wezfurlong.wezterm",
+            "wm_class_instance": "org.wezfurlong.wezterm",
+            "cmd": [
+                "/home/mlaktaou/.apps/wezterm/usr/bin/wezterm-gui"
+            ],
+            "process_create_time": "Thu Jun 25 14:49:28 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 3
+            },
+            "windows_count": 2,
+            "cpu_percent": "0.7",
+            "memory_percent": "0.8",
+            "desktop_file_id": "",
+            "desktop_file_id_full_path": "",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        },
+        {
+            "window_id": "0x3a00012",
+            "desktop_number": 2,
+            "pid": 501193,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 159,
+                "y_offset": 197,
+                "width": 800,
+                "height": 552
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "~",
+            "app_name": "org.wezfurlong.wezterm",
+            "wm_class": "org.wezfurlong.wezterm",
+            "wm_class_instance": "org.wezfurlong.wezterm",
+            "cmd": [
+                "/home/mlaktaou/.apps/wezterm/usr/bin/wezterm-gui"
+            ],
+            "process_create_time": "Thu Jun 25 14:49:28 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 0
+            },
+            "windows_count": 2,
+            "cpu_percent": "0.7",
+            "memory_percent": "0.8",
+            "desktop_file_id": "",
+            "desktop_file_id_full_path": "",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        },
+        {
+            "window_id": "0x3800003",
+            "desktop_number": 3,
+            "pid": 501196,
+            "username": "mlaktaou",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 159,
+                "y_offset": 197,
+                "width": 800,
+                "height": 552
+            },
+            "client_machine_name": "c4r5p2.1337.ma",
+            "window_title": "~",
+            "app_name": "org.wezfurlong.wezterm",
+            "wm_class": "org.wezfurlong.wezterm",
+            "wm_class_instance": "org.wezfurlong.wezterm",
+            "cmd": [
+                "/home/mlaktaou/.apps/wezterm/usr/bin/wezterm-gui"
+            ],
+            "process_create_time": "Thu Jun 25 14:49:28 2026",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 0
+            },
+            "windows_count": 1,
+            "cpu_percent": "0.5",
+            "memory_percent": "0.8",
+            "desktop_file_id": "",
+            "desktop_file_id_full_path": "",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        }
+    ]
+}
