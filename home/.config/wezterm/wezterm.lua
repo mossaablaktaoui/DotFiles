@@ -26,7 +26,7 @@ config.color_scheme = "Tokyo Night"
 config.font_size = 13
 
 -- Appearance - background opacity
-config.window_background_opacity = 1
+config.window_background_opacity = 0.85
 
 -- Shortcuts
 

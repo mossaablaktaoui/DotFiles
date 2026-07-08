@@ -62,6 +62,7 @@ alias c="clear"
 alias e="exit"
 alias s="source ~/.zshrc"
 alias p="python3"
+alias n="norminette"
 
 # App shortcuts
 alias nvim="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
@@ -74,8 +75,8 @@ alias wezterm="$HOME/.apps/wezterm/AppRun"
 alias enbaledhikr="systemctl --user enable dhikr-reminder.timer"
 
 # Swap Alt and Win keys in GNOME
-alias swap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options "['altwin:swap_alt_win']""
-alias unswap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options "[]""
+alias swap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options \"['altwin:swap_alt_win']\""
+alias unswap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options \"[]\""
 
 # ============================================================
 # Zsh Vi mode
