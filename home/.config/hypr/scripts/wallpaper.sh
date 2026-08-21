@@ -22,7 +22,6 @@ fi
 python3 "$SCRIPT_DIR/ml4w-colorgen.py" "$WALLPAPER"
 
 # Restart waybar to apply new colors
-killall waybar 2>/dev/null
 pkill waybar 2>/dev/null
 sleep 0.5
-bash "$HOME/.config/waybar/launch.sh" &
+waybar &
