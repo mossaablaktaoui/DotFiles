@@ -16,7 +16,7 @@ hl.config({
 		rounding = 10,
 		rounding_power = 2,
 		active_opacity = 1.0,
-		inactive_opacity = 0.8,
+		inactive_opacity = 1.0,
 		shadow = {
 			enabled = true,
 			range = 4,
@@ -32,6 +32,11 @@ hl.config({
 	},
 	animations = {
 		enabled = true,
+	},
+	cursor = {
+		no_warps = true,
+		warp_on_change_workspace = 0,
+		persistent_warps = false,
 	},
 })
 
