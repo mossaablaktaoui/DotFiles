@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "prompt_max_height": 35,
+  "vim_enter_submit": false,
+  "vim_insert_after_submit": true,
+  "vim_system_clipboard_register": true,
+  "vim_modal_input": true,
+  "vim_escape_sequence": "jj",
+  "keybinds": {
+    "vim.normal": {
+      "messages_line_down": "j",
+      "messages_line_up": "k",
+    }
+  }
+}

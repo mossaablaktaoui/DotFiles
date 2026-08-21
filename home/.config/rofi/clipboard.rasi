@@ -1,0 +1,123 @@
+configuration {
+    font: "Lato Bold 11";
+    show-icons: false;
+    hover-select: true;
+    click-to-exit: true;
+    kb-cancel: "Escape";
+    matching: "fuzzy";
+}
+
+@import "~/.config/liquid-glass/palette.rasi"
+
+window {
+    width: 34em;
+    transparency: "real";
+    padding: 10px;
+
+    background-color: @lg-glass;
+    border: @lg-edge-border;
+    border-color: @lg-border;
+    border-radius: @lg-radius-large;
+}
+
+mainbox,
+inputbar,
+listview {
+    background-color: transparent;
+}
+
+mainbox {
+    spacing: @lg-gap-medium;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    spacing: @lg-gap-medium;
+    padding: 8px 12px;
+
+    background-color: @lg-surface;
+    border: @lg-edge-border;
+    border-color: @lg-border;
+    border-radius: @lg-radius-pill;
+
+    children: [ textbox-prompt-colon, entry ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    padding: 0px 10px 0px 2px;
+
+    font: "AtkynsonMono Nerd Font Bold 11";
+    text-color: @lg-text;
+    background-color: transparent;
+}
+
+entry {
+    placeholder: "Search clipboard history";
+    placeholder-color: @lg-dim;
+    text-color: @lg-text;
+    background-color: transparent;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: @lg-gap-small;
+    padding: 2px;
+
+    fixed-height: true;
+    dynamic: true;
+    cycle: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 9px 11px;
+
+    background-color: @lg-surface;
+    border: @lg-edge-border;
+    border-color: @lg-border;
+    border-radius: @lg-radius-medium;
+    text-color: @lg-subtext;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+    background-color: transparent;
+}
+
+element selected,
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @lg-hover;
+    text-color: @lg-text;
+    border-color: @lg-border-strong;
+}
+
+element normal.active,
+element alternate.active,
+element normal.urgent,
+element alternate.urgent {
+    background-color: @lg-surface;
+    text-color: @lg-subtext;
+}
+
+message {
+    padding: 8px;
+    border-radius: @lg-radius-medium;
+    text-color: @lg-text;
+    background-color: @lg-surface;
+}
+
+textbox {
+    text-color: @lg-text;
+    background-color: transparent;
+}
+
+error-message {
+    padding: 10px;
+    text-color: @lg-text;
+    background-color: @lg-glass;
+}

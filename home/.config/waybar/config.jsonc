@@ -1,0 +1,167 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 5,
+    "margin-right": 5,
+    "spacing": 0,
+
+	"modules-left": [
+		"custom/arch",
+		"wlr/taskbar",
+	],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+	"modules-right": [
+		"custom/updates",
+		"custom/power",
+		"pulseaudio",
+		"bluetooth",
+		"network",
+		"hyprland/language",
+		"clock",
+		"battery",
+		"custom/notification",
+	],
+
+	"custom/arch": {
+		"format": "\uF303",
+		"on-click": "rofi -show drun -config ~/.config/rofi/launcher.rasi",
+		"tooltip": true,
+		"tooltip-format": "I use Arch BTW"
+	},
+
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 22,
+		"all-outputs": true,
+		"sort-by-app-id": false,
+		"active-first": false,
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close"
+	},
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": [1, 2, 3]
+        },
+        "all-outputs": true
+    },
+
+    "custom/updates": {
+        "format": "󰅢  {}",
+        "exec-if": "which pacman",
+        "exec": "pacman -Qu 2>/dev/null | wc -l | tr -d ' '",
+        "interval": 1800,
+        "tooltip-format": "{} updates available"
+    },
+
+	"custom/power": {
+		"format": "󰐥",
+		"on-click": "$HOME/.config/rofi/scripts/power-menu",
+		"tooltip": true,
+		"tooltip-format": "Power Menu"
+	},
+
+    "pulseaudio": {
+        "format": "{icon}",
+		"tooltip-format": "{desc}: {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "$HOME/.config/control-center/run-sound.sh",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
+        "scroll-step": 5
+    },
+
+	"bluetooth": {
+		"format": "",// 
+		"format-disabled": "",
+		"format-off": "",
+		"interval": 30,
+		"format-no-controller": "",
+		"tooltip": true,
+		"tooltip-format": "{status}",
+		"tooltip-format": "Not Connected",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}",
+		"on-click": "~/.config/control-center/run-bluetooth.sh"
+	},
+
+	"network": {
+		"format-wifi": "{icon}",
+		"format-ethernet": "",
+		"format-disconnected": "󰤭",
+		"format-linked": "󰤫",
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		"tooltip-format-wifi": "{essid}: {signalStrength}%",
+		"interval": 5,
+		"on-click": "~/.config/control-center/run-wifi.sh"
+	},
+
+	"hyprland/language": {
+		"format": "{shortDescription}",
+		"keyboard-name": "yjx-chip-usb-receiver-keyboard",
+		"on-click": "hyprctl switchxkblayout all next",
+
+		"tooltip": true,
+		"tooltip-format": "{shortDescription}",
+
+		"menu": "on-click-right",
+		"menu-file": "/home/mlaktaou/.config/waybar/scripts/language-menu.xml",
+
+		"menu-actions": {
+			"english": "hyprctl switchxkblayout all 0",
+			"arabic": "hyprctl switchxkblayout all 1"
+		},
+	},
+
+
+    "clock": {
+        "format": "{:%b%d %H:%M}",
+        "format-alt": "{:%a %d %b %Y %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "{capacity}%"
+    },
+
+	"custom/notification": {
+		"format": "{icon}",
+		"format-icons": {
+		"notification": "\uF0F3",
+		"none": "\uF0F3",
+		"dnd-notification": "\uF0F3",
+		"dnd-none": "\uF0F3"
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+}

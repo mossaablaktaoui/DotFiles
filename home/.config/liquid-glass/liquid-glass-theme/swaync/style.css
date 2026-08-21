@@ -1,0 +1,327 @@
+@import url("../liquid-glass/palette.css");
+
+* {
+    font-family:
+        "Lato",
+        "Inter",
+        "IBM Plex Sans Arabic",
+        "Tajawal",
+        "JetBrainsMono Nerd Font",
+        "Font Awesome 6 Free",
+        sans-serif;
+
+    color: @lg_text;
+    font-size: 12px;
+}
+
+.blank-window,
+.floating-notifications,
+.notification-row,
+.notification-background,
+.notification-group,
+.notification-group-notification,
+.notification-group-headers,
+.control-center-list,
+.control-center-list-placeholder,
+.control-center-list-placeholder-label,
+.widget-title,
+.widget-dnd,
+.widget-label,
+.widget-buttons-grid,
+.widget-mpris,
+.widget-volume,
+.widget-backlight {
+    background: transparent;
+}
+
+/* Shared liquid-glass surfaces */
+.notification,
+.control-center,
+.widget-buttons-grid button,
+.widget-volume,
+.widget-backlight,
+.notifications-title > button {
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 1px -1px @lg_shine,
+                inset 0 -2px 1px -1px @lg_shine;
+}
+
+.notification,
+.control-center {
+    background: @lg_panel;
+}
+
+.notification:hover,
+.widget-buttons-grid button:hover,
+.widget-volume:hover,
+.widget-backlight:hover,
+.notifications-title > button:hover,
+.control-center .notification:hover {
+    background: @lg_hover;
+}
+
+/* Floating notifications */
+.floating-notifications .notification-row {
+    margin: 0 6px 6px;
+}
+
+.notification {
+    padding: 5px;
+}
+
+.notification.critical,
+.control-center .notification.critical {
+    border: 2px solid @lg_urgent;
+}
+
+.notification-content,
+.notification-default-action,
+.notification-default-action:hover {
+    background: transparent;
+    font-weight: 700;
+}
+
+.summary {
+    margin: 2px 10px;
+    color: @lg_text;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.body {
+    margin: 2px 13px;
+    color: @lg_subtext;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.time {
+    color: @lg_dim;
+}
+
+.image {
+    border-radius: 5px;
+}
+
+/* Control center shell */
+.control-center {
+    margin: 4px;
+    padding: 0;
+    box-shadow: inset 0 3px 1px -2px @lg_shine_strong,
+                inset 0 -3px 1px -2px @lg_shine_strong;
+}
+
+/* Notification list and group spacing */
+.widget-notifications {
+    margin: 0;
+    padding: 0 0 8px;
+}
+
+.control-center .notification-row {
+    margin: 0 12px 6px;
+}
+
+.notification-group {
+    margin: 6px 12px;
+    padding: 0;
+}
+
+.notification-group-headers {
+    margin: 0 4px 6px;
+    padding: 0;
+}
+
+.notification-group-notification {
+    margin: 0 0 6px;
+    padding: 0;
+}
+
+.notification-group-notification:last-child {
+    margin-bottom: 0;
+}
+
+.notification-group .notification-row {
+    margin: 0 0 6px;
+}
+
+.notification-group .notification-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Notifications inside the control center */
+.control-center .notification-background,
+.control-center .notification-background:hover,
+.control-center .notification-row .notification-background:hover {
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: none;
+}
+
+.control-center .notification {
+    margin: 0;
+    padding: 5px;
+    background: @lg_surface;
+    color: @lg_text;
+    box-shadow: inset 0 2px 1px -1px @lg_shine,
+                inset 0 -2px 1px -1px @lg_shine;
+}
+
+.control-center .notification-content,
+.control-center .notification-default-action,
+.control-center .notification-default-action:hover {
+    background: transparent;
+    font-weight: 700;
+}
+
+/* System information */
+.system-info {
+    margin: 0;
+    padding: 10px 10px 0;
+    border-radius: 0;
+    background: transparent;
+    color: @lg_text;
+}
+
+.system-info > label {
+    padding: 5px;
+    font-family: "Lato", "IBM Plex Sans Arabic", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* Toggle grid */
+.widget-buttons-grid {
+    padding: 0 3px;
+    border-radius: 16px;
+}
+
+.widget-buttons-grid flowboxchild {
+    background: transparent;
+}
+
+.widget-buttons-grid button {
+    min-width: 35px;
+    min-height: 25px;
+    background: @lg_surface;
+    transition: all 180ms ease;
+}
+
+.widget-buttons-grid button label {
+    color: @lg_text;
+    font-size: 22px;
+}
+
+.widget-buttons-grid button:checked {
+    background: @lg_solid;
+}
+
+.widget-buttons-grid button:checked label {
+    color: @lg_on_solid;
+}
+
+.widget-buttons-grid button:active {
+    background: @lg_pressed;
+}
+
+.widget-buttons-grid button:active label {
+    color: @lg_text;
+}
+
+/* Volume and brightness */
+.widget-volume,
+.widget-backlight {
+    margin: 2px 14px;
+    padding: 10px 18px 10px 10px;
+    background: @lg_surface;
+    transition: all 180ms ease;
+}
+
+.widget-volume > box > label,
+.widget-backlight label {
+    min-width: 26px;
+    margin-right: 10px;
+    color: @lg_text;
+    font-size: 18px;
+}
+
+.widget-volume scale,
+.widget-backlight scale {
+    min-height: 20px;
+    padding: 0;
+}
+
+.widget-volume trough,
+.widget-backlight trough {
+    min-height: 7px;
+    border: none;
+    border-radius: 99px;
+    background: @lg_track;
+}
+
+.widget-volume highlight,
+.widget-backlight highlight {
+    min-height: 7px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 99px 0 0 99px;
+    background: @lg_fill;
+    box-shadow: inset 0 3px 1px -2px @lg_shine,
+                inset 0 -3px 1px -2px @lg_shine;
+}
+
+.widget-volume slider,
+.widget-backlight slider {
+    min-width: 0;
+    min-height: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    opacity: 0;
+}
+
+.widget-volume scale:hover highlight,
+.widget-backlight scale:hover highlight {
+    background: @lg_solid;
+}
+
+.widget-volume scale:hover slider,
+.widget-backlight scale:hover slider {
+    min-width: 17px;
+    min-height: 17px;
+}
+
+/* Notifications header */
+.notifications-title {
+    margin: 3px 14px;
+    padding: 0;
+    border-radius: 0;
+    color: @lg_text;
+}
+
+.notifications-title > label {
+    padding: 0 8px;
+    color: @lg_text;
+    font-family: "Lato", "IBM Plex Sans Arabic", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.notifications-title > button {
+    min-width: 30px;
+    min-height: 30px;
+    margin: 0;
+    padding: 0 2px 0 0;
+    background: @lg_surface;
+    text-shadow: none;
+}
+
+.notifications-title button label {
+    font-size: 24px;
+}
+
+.notifications-title > button:active {
+    background: @lg_pressed;
+}

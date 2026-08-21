@@ -1,0 +1,94 @@
+configuration {
+    font: "AtkynsonMono Nerd Font Bold 11";
+    show-icons: false;
+    click-to-exit: true;
+    kb-cancel: "Escape";
+    hover-select: true;
+}
+
+@theme "~/.config/liquid-glass/palette.rasi"
+
+window {
+    width: 18em;
+    transparency: "real";
+    padding: 10px;
+
+    background-color: @lg-glass;
+    border: @lg-edge-border;
+    border-color: @lg-border;
+    border-radius: @lg-radius-large;
+}
+
+mainbox,
+inputbar,
+listview {
+    background-color: transparent;
+}
+
+mainbox {
+    spacing: @lg-gap-medium;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    spacing: @lg-gap-small;
+    padding: 1px;
+    children: [ textbox-prompt-colon ];
+}
+
+textbox-prompt-colon,
+element {
+    background-color: @lg-surface;
+    border: @lg-edge-border;
+    border-color: @lg-border;
+    border-radius: @lg-radius-medium;
+}
+
+textbox-prompt-colon {
+    expand: true;
+    str: "󰐥  Power Menu";
+    padding: 9px 12px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-color: @lg-text;
+}
+
+listview {
+    lines: 5;
+    columns: 1;
+    spacing: @lg-gap-small;
+    padding: 2px;
+
+    fixed-height: true;
+    dynamic: true;
+    cycle: true;
+    scrollbar: false;
+}
+
+element {
+    spacing: 12px;
+    padding: 10px 12px;
+    text-color: @lg-text;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+    background-color: transparent;
+}
+
+element selected,
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @lg-hover;
+    text-color: @lg-text;
+}
+
+element normal.active,
+element alternate.active,
+element normal.urgent,
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @lg-text;
+}

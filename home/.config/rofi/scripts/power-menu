@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+theme="$HOME/.config/rofi/power-menu.rasi"
+
+shutdown="  Shutdown"
+reboot="  Reboot"
+logout="󰍃  Logout"
+lock="  Lock"
+suspend="󰒲  Suspend"
+
+selected="$(
+	printf '%s\n' \
+		"$lock" \
+		"$suspend" \
+		"$logout" \
+		"$reboot" \
+		"$shutdown" |
+		rofi \
+			-dmenu \
+			-i \
+			-p "" \
+			-theme "$theme"
+)"
+
+case "$selected" in
+"$shutdown")
+	systemctl poweroff
+	;;
+"$reboot")
+	systemctl reboot
+	;;
+"$logout")
+	hyprctl dispatch exit
+	;;
+"$lock")
+	if command -v hyprlock >/dev/null 2>&1; then
+		hyprlock
+	elif command -v swaylock >/dev/null 2>&1; then
+		swaylock
+	else
+		notify-send "Power Menu" "No supported lock command was found."
+	fi
+	;;
+"$suspend")
+	systemctl suspend
+	;;
+esac

@@ -36,8 +36,10 @@ export PATH="$HOME/.opencode/bin:$PATH"
 
 # Use your local Neovim AppImage as the main editor
 
-export EDITOR="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
-export VISUAL="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
+# export EDITOR="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
+# export VISUAL="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # ============================================================
 # NVM / Node.js
@@ -64,8 +66,8 @@ alias s="source ~/.zshrc"
 alias p="python3"
 
 # App shortcuts
-alias nvim="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
-alias wezterm="$HOME/.apps/wezterm/AppRun"
+# alias nvim="$HOME/.apps/neovim/nvim-linux-x86_64.appimage"
+# alias wezterm="$HOME/.apps/wezterm/AppRun"
 
 # ============================================================
 # Aliases — system / GNOME
@@ -74,8 +76,12 @@ alias wezterm="$HOME/.apps/wezterm/AppRun"
 alias enbaledhikr="systemctl --user enable dhikr-reminder.timer"
 
 # Swap Alt and Win keys in GNOME
-alias swap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options "['altwin:swap_alt_win']""
-alias unswap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options "[]""
+alias swap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options \"['altwin:swap_alt_win']\""
+alias unswap_alt_win="gsettings set org.gnome.desktop.input-sources xkb-options \"[]\""
+
+# Folders shortcuts
+alias moss="cd /mnt/MOSS_LAK/"
+alias ds="QT_QPA_PLATFORM=xcb ~/Qt/Tools/QtDesignStudio/bin/qtdesignstudio"
 
 # ============================================================
 # Zsh Vi mode
@@ -132,3 +138,25 @@ fi
 
 rm -f -- "$tmp"
 }
+
+# ============================================================
+# Antigravity helper
+# ============================================================
+
+export PATH="/home/mlaktaou/.local/bin:$PATH"
+
+# ============================================================
+# Designer
+# ============================================================
+
+export QT_SCREEN_SCALE_FACTORS=0.9
+unset QT_QPA_PLATFORM
+unset QT_QPA_PLATFORMTHEME
+unset QT_STYLE_OVERRIDE
+unset QT_SCALE_FACTOR
+unset QT_SCREEN_SCALE_FACTORS
+unset QT_AUTO_SCREEN_SCALE_FACTOR
+unset QT_ENABLE_HIGHDPI_SCALING
+unset QT_SCALE_FACTOR_ROUNDING_POLICY
+unset QT_QPA_PLATFORM_PLUGIN_PATH
+unset QT_PLUGIN_PATH

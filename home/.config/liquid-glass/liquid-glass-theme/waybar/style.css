@@ -1,0 +1,291 @@
+@import url("../liquid-glass/palette.css");
+
+* {
+    font-family:
+        "Lato",
+        "Inter",
+        "IBM Plex Sans Arabic",
+        "Tajawal",
+        "JetBrainsMono Nerd Font",
+        "Font Awesome 6 Free",
+        sans-serif;
+
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: transparent;
+    color: @lg_text;
+    transition: all 300ms ease-in-out;
+}
+
+/* Shared glass surfaces */
+#custom-arch,
+#custom-power,
+#pulseaudio,
+#bluetooth,
+#network,
+#language,
+#clock,
+#battery {
+    margin-top: 3px;
+    background: @lg_glass;
+    color: @lg_text;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+    box-shadow: inset 0 1px 1px @lg_shine,
+                inset 0 -1px 1px @lg_shine;
+}
+
+#custom-arch:hover,
+#custom-power:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#language:hover,
+#clock:hover,
+#battery:hover,
+menuitem:hover {
+    background: @lg_hover;
+    color: @lg_text;
+}
+
+/* Launcher */
+#custom-arch {
+    margin-left: 0;
+    padding: 0 16px 2px 11px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition-duration: 150ms;
+}
+
+#custom-arch:hover {
+    min-width: 25px;
+    border-radius: 14px;
+    color: @lg_accent;
+    font-size: 22px;
+}
+
+/* Solid task area */
+#taskbar,
+#custom-updates,
+#window,
+#workspaces button.active,
+#workspaces button.urgent {
+    background: @lg_solid;
+    color: @lg_on_solid;
+}
+
+#taskbar,
+#custom-updates,
+#window,
+#workspaces button,
+tooltip,
+menu,
+menuitem {
+    box-shadow: inset 0 1px 1px @lg_shine,
+                inset 0 -1px 1px @lg_shine;
+}
+
+#taskbar {
+    margin: 3px 0 0 5px;
+    padding: 0 4px;
+    border-radius: 10px;
+    transition: all 150ms ease-in-out;
+}
+
+#taskbar button {
+    min-width: 22px;
+    margin: 2px 1px;
+    padding: 0 6px;
+    border-radius: 7px;
+    background: transparent;
+    color: @lg_on_solid;
+    text-shadow: none;
+    transition: all 300ms ease-in-out;
+}
+
+#taskbar button:hover,
+#taskbar button.active,
+#taskbar button.urgent,
+#window:hover {
+    background: @lg_solid_hover;
+    color: @lg_on_solid;
+}
+
+#taskbar button.minimized {
+    opacity: 0.45;
+}
+
+#taskbar.empty {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Workspaces */
+#workspaces {
+    background: transparent;
+    transition: all 300ms ease-in-out;
+}
+
+#workspaces button {
+    min-width: 20px;
+    margin: 4px 2px;
+    padding: 0 6px;
+    border-radius: 5px;
+    background: @lg_glass;
+    color: @lg_text;
+    font-size: 12px;
+    font-weight: 700;
+    text-shadow: none;
+    transition: all 300ms ease-in-out;
+}
+
+#workspaces button:hover,
+#workspaces button.active:hover {
+    background: @lg_hover;
+    color: @lg_text;
+}
+
+#workspaces button.active {
+    min-width: 70px;
+    border-radius: 10px;
+}
+
+#workspaces button.empty {
+    background: @lg_surface_soft;
+    color: @lg_dim;
+}
+
+/* Updates and power */
+#custom-updates {
+    margin: 3px 4px 0;
+    padding: 0 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+}
+
+#custom-updates:hover {
+    background: @lg_hover;
+    color: @lg_text;
+}
+
+#custom-power {
+    margin-right: 4px;
+    padding: 0 11px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* Right-side joined group */
+#pulseaudio {
+    padding: 0 15px 0 9px;
+    border-radius: 10px 0 0 10px;
+}
+
+#pulseaudio.muted {
+    padding: 0 14px 0 9px;
+    color: @lg_disabled;
+}
+
+#bluetooth {
+    padding: 0 8px 0 7px;
+    transition-duration: 400ms;
+}
+
+#bluetooth.disconnected,
+#bluetooth.disabled {
+    min-width: 0;
+}
+
+#network {
+    padding: 0 13px 0 8px;
+}
+
+#network.disconnected {
+    color: @lg_disabled;
+}
+
+#language {
+    padding: 0 9px;
+}
+
+#clock {
+    padding: 0 5px;
+}
+
+#battery {
+    padding: 0 8px 2px 5px;
+    border-radius: 0 10px 10px 0;
+    font-size: 22px;
+}
+
+#battery.warning { color: @lg_warning; }
+#battery.critical { color: @lg_critical; }
+#battery.charging,
+#battery.plugged { color: @lg_charging; }
+
+/* Optional window module */
+#window {
+    min-width: 22px;
+    margin: 3px 0 0 5px;
+    padding: 0 8px;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+window#waybar.empty #window {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: transparent;
+    font-size: 0;
+}
+
+/* Popovers */
+tooltip,
+menu {
+    background: @lg_panel;
+    color: @lg_text;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+tooltip label,
+menuitem label {
+    color: @lg_text;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+tooltip label {
+    padding: 0;
+}
+
+menu {
+    padding: 5px;
+}
+
+menuitem {
+    margin: 1px 0;
+    padding: 6px 12px;
+    border-radius: 7px;
+    background: @lg_surface;
+    color: @lg_text;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+}
+
+menu separator {
+    min-height: 1px;
+    margin: 4px 6px;
+    background: @lg_border_strong;
+}
