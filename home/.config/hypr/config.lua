@@ -1,8 +1,17 @@
 -- Monitor
+-- External screen sits to the LEFT of the laptop and ~200px higher,
+-- so its top starts at y=0 while the laptop is shifted down to y=324.
+hl.monitor({
+	output = "HDMI-A-1",
+	mode = "1280x1024@75",
+	position = "0x0",
+	scale = "1",
+})
+
 hl.monitor({
 	output = "eDP-1",
 	mode = "1600x900@60",
-	position = "0x0",
+	position = "1280x324",
 	scale = "1",
 })
 
