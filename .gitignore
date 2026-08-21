@@ -1,0 +1,12 @@
+# Vesktop: only themes are config; everything else is Electron session data
+home/.config/vesktop/*
+!home/.config/vesktop/themes/
+
+# Caches / compiled artifacts
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+
+# Mutable app state
+home/.config/another-window-session-manager/sessions/
